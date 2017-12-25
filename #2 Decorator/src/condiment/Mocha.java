@@ -17,7 +17,17 @@ public class Mocha extends AbstractCondimentDecorator {
 
 	@Override
 	public double getPrice() {
-		return component.getPrice() + 0.60;
+		switch (getSize()) {
+			case AbstractBeverage.VENTI : return component.getPrice() + 0.40;
+			case AbstractBeverage.GRANDE : return component.getPrice() + 0.35;
+			case AbstractBeverage.TALL : return component.getPrice() + 0.30;
+			default : return component.getPrice() + 0.30;
+		}
+	}
+
+	@Override
+	public String getSize() {
+		return component.getSize();
 	}
 
 	public List<String> getDescription() {

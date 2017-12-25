@@ -32,15 +32,17 @@ public class Main {
 
 
 		AbstractBeverage beverage0 = new Espresso();
-		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0.getDescription()), beverage0.getPrice());
+		beverage0.setSize("Venti");
+		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0), beverage0.getPrice());
 		beverage0 = new Mocha(beverage0);
-		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0.getDescription()), beverage0.getPrice());
+		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0), beverage0.getPrice());
 		beverage0 = new Mocha(beverage0);
-		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0.getDescription()), beverage0.getPrice());
+		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0), beverage0.getPrice());
 		beverage0 = new ExtraShot(beverage0);
-		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0.getDescription()), beverage0.getPrice());
+		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0), beverage0.getPrice());
 		beverage0 = new ExtraShot(beverage0);
-		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0.getDescription()), beverage0.getPrice());
+		beverage0 = new Mocha(beverage0);
+		System.out.printf("%s, %.2f\n", PrettyFormatter.format(beverage0), beverage0.getPrice());
 	}
 
 }

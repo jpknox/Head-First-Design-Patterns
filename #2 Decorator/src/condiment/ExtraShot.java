@@ -16,10 +16,20 @@ public class ExtraShot extends AbstractCondimentDecorator {
 
 	@Override
 	public double getPrice() {
-		return component.getPrice() + 0.30;
+		switch (getSize()) {
+			case AbstractBeverage.VENTI : return component.getPrice() + 0.40;
+			case AbstractBeverage.GRANDE : return component.getPrice() + 0.35;
+			case AbstractBeverage.TALL : return component.getPrice() + 0.30;
+			default : return component.getPrice() + 0.30;
+		}
 	}
 
 	public List<String> getDescription() {
 		return component.getDescription();
+	}
+
+	@Override
+	public String getSize() {
+		return component.getSize();
 	}
 }

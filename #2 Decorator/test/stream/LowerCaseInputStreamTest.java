@@ -19,18 +19,6 @@ import static org.junit.Assert.assertTrue;
  */
 public class LowerCaseInputStreamTest {
 
-	LowerCaseInputStream lowerCaseInputStream;
-
-	@Before
-	public void setup() {
-
-	}
-
-	@After
-	public void teardown() {
-
-	}
-
 	@Test
 	public void testAllPrintableAsciiCharacters() {
 		String printableAsciiCharacters = " !\"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
